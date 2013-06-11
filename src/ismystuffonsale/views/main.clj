@@ -2,7 +2,7 @@
   (:use hiccup.core hiccup.form))
 
 (defn index-page []
-  (html5
+  (html
     [:head
      [:title "Is My Stuff On Sale?"]]
     [:body
