@@ -6,10 +6,7 @@
             [compojure.handler :as handler]))
 
 (defn main-action [request]
-  (let [user (persistence/create-user "pickdavid@gmail.com")]
-    (do
-      (persistence/create-item {:user user :title "foo" :url "http://www.foo.com"})
-      (main-views/index-page (persistence/all-users)))))
+  (main-views/index-page))
 
 (defroutes main-routes
            (GET "/" [] main-action)
